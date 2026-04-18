@@ -9,10 +9,10 @@ const MusicScene = () => {
         <header className="text-center mb-12">
           <p className="text-xs uppercase tracking-[0.35em] text-rose-500 mb-2">Scene 05</p>
           <h2 className="font-serif-romantic text-5xl md:text-6xl text-rose-900 italic">
-            Playlist dành cho em
+            A playlist for you
           </h2>
           <p className="mt-3 text-rose-700/70 font-serif-romantic text-lg italic">
-            Những bài anh muốn nghe cùng em
+            Songs I want to listen to with you
           </p>
         </header>
 
@@ -49,7 +49,7 @@ const MusicScene = () => {
         </div>
 
         <p className="text-center text-xs text-rose-500/70 mt-8 italic">
-          * Nhạc nền đang phát bên dưới — dùng nút ở góc phải để tạm dừng hoặc tiếp tục.
+          * Music is playing in the background — use the button at the bottom right to pause or resume.
         </p>
       </div>
     </section>

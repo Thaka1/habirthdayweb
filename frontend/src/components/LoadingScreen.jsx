@@ -5,42 +5,45 @@ import { mockData } from '../mock';
 const LoadingScreen = ({ onComplete }) => {
   const [progress, setProgress] = useState(0);
   const [hearts, setHearts] = useState([]);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
-          setTimeout(() => onComplete(), 500);
+          setTimeout(() => setReady(true), 400);
           return 100;
         }
         return prev + 1;
       });
     }, 28);
     return () => clearInterval(interval);
-  }, [onComplete]);
+  }, []);
 
   useEffect(() => {
     const heartInterval = setInterval(() => {
-      const newHeart = {
-        id: Math.random(),
-        left: Math.random() * 100,
-        animationDuration: 2 + Math.random() * 2,
-        size: 18 + Math.random() * 22,
-      };
-      setHearts((prev) => [...prev.slice(-10), newHeart]);
+      setHearts((prev) => [
+        ...prev.slice(-10),
+        {
+          id: Math.random(),
+          left: Math.random() * 100,
+          animationDuration: 2 + Math.random() * 2,
+          size: 18 + Math.random() * 22,
+        },
+      ]);
     }, 280);
     return () => clearInterval(heartInterval);
   }, []);
 
   const message =
     progress < 25
-      ? 'Đang gói món quà...'
+      ? 'Wrapping your gift…'
       : progress < 55
-      ? 'Rắc thêm chút ngọt ngào...'
+      ? 'Adding a little sweetness…'
       : progress < 85
-      ? 'Thắp nến cho em...'
-      : 'Sẵn sàng rồi ♡';
+      ? 'Lighting the candles…'
+      : 'Almost ready ♡';
 
   return (
     <div
@@ -90,12 +93,12 @@ const LoadingScreen = ({ onComplete }) => {
           </div>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 min-h-[70px]">
           <p className="font-serif-romantic text-3xl text-rose-700 mb-2 italic">
             {message}
           </p>
           <p className="text-sm text-pink-500/80 tracking-wide">
-            Một điều bất ngờ đang được chuẩn bị...
+            Preparing a little surprise…
           </p>
         </div>
 
@@ -104,6 +107,20 @@ const LoadingScreen = ({ onComplete }) => {
             className="h-full bg-gradient-to-r from-pink-400 to-rose-500 rounded-full transition-all duration-300 ease-out"
             style={{ width: `${progress}%` }}
           />
+        </div>
+
+        {/* Enter button — appears when ready. Click counts as a user gesture for audio autoplay. */}
+        <div className="mt-10 h-14 flex justify-center">
+          {ready && (
+            <button
+              onClick={onComplete}
+              data-testid="enter-btn"
+              className="animate-scene-enter inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-medium tracking-wide shadow-xl shadow-rose-500/30 transition-all hover:scale-105 animate-glow"
+            >
+              <Heart className="w-4 h-4 fill-white" />
+              Open your surprise
+            </button>
+          )}
         </div>
       </div>
 

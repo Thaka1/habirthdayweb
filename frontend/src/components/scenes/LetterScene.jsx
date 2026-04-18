@@ -15,7 +15,7 @@ const LetterScene = () => {
           {mockData.letter.title}
         </h2>
         <p className="mt-3 text-rose-700/70 font-serif-romantic text-lg italic">
-          {open ? 'Đọc chậm thôi nhé em ♡' : 'Chạm vào phong thư để mở…'}
+          {open ? 'Take your time, my love ♡' : 'Tap the envelope to open…'}
         </p>
       </header>
 
@@ -34,7 +34,7 @@ const LetterScene = () => {
             role="button"
             tabIndex={0}
             onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setOpen(true)}
-            aria-label="Mở phong thư"
+            aria-label="Open the letter"
           >
             <div className="envelope-body">
               <div className="envelope-seal">
@@ -57,8 +57,7 @@ const LetterScene = () => {
           <div
             className="relative mx-auto max-w-lg rounded-[14px] p-8 md:p-10 shadow-2xl border border-rose-200"
             style={{
-              background:
-                'linear-gradient(180deg, #fffafb 0%, #fff0f3 100%)',
+              background: 'linear-gradient(180deg, #fffafb 0%, #fff0f3 100%)',
               backgroundImage:
                 'repeating-linear-gradient(180deg, transparent 0, transparent 31px, rgba(244,114,182,0.12) 31px, rgba(244,114,182,0.12) 32px)',
             }}
@@ -67,7 +66,7 @@ const LetterScene = () => {
             <button
               onClick={() => setOpen(false)}
               data-testid="close-letter-btn"
-              aria-label="Đóng phong thư"
+              aria-label="Close letter"
               className="absolute top-3 right-3 w-8 h-8 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-500 flex items-center justify-center"
             >
               <X className="w-4 h-4" />
@@ -86,7 +85,6 @@ const LetterScene = () => {
               </p>
             </div>
 
-            {/* small hearts at corners */}
             <Heart className="absolute -top-3 -left-3 w-6 h-6 fill-rose-400 text-rose-400 rotate-[-15deg]" />
             <Heart className="absolute -bottom-3 -right-3 w-6 h-6 fill-rose-400 text-rose-400 rotate-[15deg]" />
           </div>
@@ -95,7 +93,7 @@ const LetterScene = () => {
 
       {!open && (
         <p className="mt-4 text-rose-500/80 text-sm italic animate-pulse" data-testid="letter-hint">
-          ♡ click để mở phong thư ♡
+          ♡ click to open ♡
         </p>
       )}
     </section>

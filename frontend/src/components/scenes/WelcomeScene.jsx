@@ -47,7 +47,7 @@ const WelcomeScene = ({ onNext }) => {
         </div>
 
         <p className="font-script text-3xl md:text-4xl text-rose-500 mb-2">
-          To my dearest
+          to my dearest
         </p>
         <h1 className="font-serif-romantic text-6xl md:text-8xl leading-[1] text-rose-900 mb-6">
           <span className="shimmer-text italic">
@@ -69,29 +69,29 @@ const WelcomeScene = ({ onNext }) => {
           >
             <Heart className="w-6 h-6 fill-rose-500 text-rose-500 animate-heartbeat" />
             <span className="font-serif-romantic text-2xl md:text-3xl text-rose-700 italic">
-              Chúc mừng sinh nhật em!
+              Happy Birthday, my love!
             </span>
           </div>
         ) : (
           <>
             <p className="text-xs uppercase tracking-[0.35em] text-rose-500 mb-4">
-              Còn lại đến ngày của em
+              Counting down to your day
             </p>
             <div
               className="flex justify-center gap-3 md:gap-5 mb-8"
               data-testid="countdown"
             >
-              <TimeCell value={cd.days} label="Ngày" testid="cd-days" />
-              <TimeCell value={cd.hours} label="Giờ" testid="cd-hours" />
-              <TimeCell value={cd.minutes} label="Phút" testid="cd-minutes" />
-              <TimeCell value={cd.seconds} label="Giây" testid="cd-seconds" />
+              <TimeCell value={cd.days} label="Days" testid="cd-days" />
+              <TimeCell value={cd.hours} label="Hours" testid="cd-hours" />
+              <TimeCell value={cd.minutes} label="Minutes" testid="cd-minutes" />
+              <TimeCell value={cd.seconds} label="Seconds" testid="cd-seconds" />
             </div>
           </>
         )}
 
         <p className="text-rose-700/80 font-serif-romantic italic text-lg md:text-xl max-w-xl mx-auto leading-relaxed">
-          Anh đã chuẩn bị một chuyến đi nhỏ qua bảy khung cảnh —
-          mỗi cảnh là một mảnh anh muốn gửi em. Theo mũi tên, hoặc chạm vào dấu chấm ở dưới nhé.
+          I've prepared a small journey through seven scenes — each one a little
+          piece I wanted to give you. Follow the arrows, or tap the dots below.
         </p>
 
         <button
@@ -100,7 +100,7 @@ const WelcomeScene = ({ onNext }) => {
           className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-medium tracking-wide shadow-xl shadow-rose-500/30 transition-all hover:scale-105"
         >
           <Heart className="w-4 h-4 fill-white" />
-          Bắt đầu hành trình
+          Begin the journey
           <ChevronDown className="w-4 h-4 rotate-[-90deg]" />
         </button>
       </div>

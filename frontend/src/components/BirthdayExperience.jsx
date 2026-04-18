@@ -9,13 +9,13 @@ import VideoScene from './scenes/VideoScene';
 import FinaleScene from './scenes/FinaleScene';
 
 const SCENES = [
-  { id: 'welcome', label: 'Mở đầu', icon: Home, Component: WelcomeScene },
-  { id: 'gallery', label: 'Khoảnh khắc', icon: ImageIcon, Component: GalleryScene },
-  { id: 'moments', label: 'Hành trình', icon: Calendar, Component: MomentsScene },
-  { id: 'letter', label: 'Lá thư', icon: Mail, Component: LetterScene },
-  { id: 'music', label: 'Âm nhạc', icon: Music, Component: MusicScene },
-  { id: 'video', label: 'Lời chúc', icon: Video, Component: VideoScene },
-  { id: 'finale', label: 'Điều ước', icon: Gift, Component: FinaleScene },
+  { id: 'welcome', label: 'Welcome', icon: Home, Component: WelcomeScene },
+  { id: 'gallery', label: 'Moments', icon: ImageIcon, Component: GalleryScene },
+  { id: 'moments', label: 'Journey', icon: Calendar, Component: MomentsScene },
+  { id: 'letter', label: 'Letter', icon: Mail, Component: LetterScene },
+  { id: 'music', label: 'Music', icon: Music, Component: MusicScene },
+  { id: 'video', label: 'Messages', icon: Video, Component: VideoScene },
+  { id: 'finale', label: 'Wish', icon: Gift, Component: FinaleScene },
 ];
 
 const BirthdayExperience = () => {

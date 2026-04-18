@@ -11,10 +11,10 @@ const VideoScene = () => {
         <header className="text-center mb-12">
           <p className="text-xs uppercase tracking-[0.35em] text-rose-500 mb-2">Scene 06</p>
           <h2 className="font-serif-romantic text-5xl md:text-6xl text-rose-900 italic">
-            Những lời muốn nói
+            Things I want to say
           </h2>
           <p className="mt-3 text-rose-700/70 font-serif-romantic text-lg italic">
-            Video nhỏ — vì có những điều anh chỉ nói được bằng hình ảnh
+            Little videos — because some things are better said with moving pictures
           </p>
         </header>
 
@@ -74,11 +74,11 @@ const VideoScene = () => {
               {selected.title}
             </h3>
             <p className="text-rose-200 mb-5 tracking-widest text-xs uppercase">
-              Thời lượng: {selected.duration}
+              Duration: {selected.duration}
             </p>
             <p className="text-white/80 text-sm max-w-md mx-auto italic">
-              Chỗ này sẽ là nơi video thực phát. Khi có backend, anh sẽ upload
-              video lên và hiển thị ở đây cho em xem ♡
+              This is where the real video will play. Once uploads are wired up,
+              I'll drop the actual clips in here for you ♡
             </p>
           </div>
         </div>

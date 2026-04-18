@@ -8,10 +8,10 @@ const MomentsScene = () => {
         <header className="text-center mb-14">
           <p className="text-xs uppercase tracking-[0.35em] text-rose-500 mb-2">Scene 03</p>
           <h2 className="font-serif-romantic text-5xl md:text-6xl text-rose-900 italic">
-            Hành trình của chúng ta
+            Our journey together
           </h2>
           <p className="mt-3 text-rose-700/70 font-serif-romantic text-lg italic">
-            Từng cột mốc nhỏ làm nên câu chuyện của mình
+            Little milestones that wrote our story
           </p>
         </header>
 

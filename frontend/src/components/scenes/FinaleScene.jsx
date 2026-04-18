@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, Gift, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { mockData } from '../../mock';
 
 const FinaleScene = () => {
@@ -33,7 +33,7 @@ const FinaleScene = () => {
           Scene 07 — Finale
         </p>
         <h2 className="font-serif-romantic text-5xl md:text-7xl text-rose-900 italic leading-tight">
-          Điều ước <span className="shimmer-text">của em</span>
+          Make a <span className="shimmer-text">wish</span>
         </h2>
 
         <div className="my-10 flex justify-center">
@@ -41,11 +41,10 @@ const FinaleScene = () => {
             onClick={() => setBlown(true)}
             data-testid="blow-candle-btn"
             className="relative group"
-            aria-label="Thổi nến"
+            aria-label="Blow the candle"
           >
-            {/* Cake */}
             <div className="relative w-52 h-44">
-              {/* top candle with flame */}
+              {/* candle + flame */}
               <div className="absolute left-1/2 -translate-x-1/2 bottom-28">
                 <div className="w-2 h-10 bg-gradient-to-b from-rose-200 to-rose-300 mx-auto rounded" />
                 {!blown ? (
@@ -61,7 +60,6 @@ const FinaleScene = () => {
               {/* bottom tier */}
               <div className="absolute left-1/2 -translate-x-1/2 bottom-2 w-52 h-16 rounded-md bg-gradient-to-b from-rose-200 to-rose-300 shadow-lg">
                 <div className="h-3 bg-gradient-to-r from-rose-500 via-pink-500 to-rose-500 rounded-t-md" />
-                {/* drips */}
                 {[15, 40, 60, 85].map((x, i) => (
                   <div
                     key={i}
@@ -70,13 +68,12 @@ const FinaleScene = () => {
                   />
                 ))}
               </div>
-              {/* plate */}
               <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-60 h-2 bg-rose-400/30 rounded-full blur-[1px]" />
             </div>
 
             {!blown && (
               <p className="mt-4 text-rose-500 text-sm italic animate-pulse">
-                ♡ ước một điều rồi thổi nến đi em ♡
+                ♡ make a wish and blow the candle ♡
               </p>
             )}
           </button>
@@ -90,9 +87,9 @@ const FinaleScene = () => {
               <Sparkles className="w-5 h-5 text-rose-400" />
             </div>
             <p className="font-serif-romantic italic text-2xl md:text-3xl text-rose-800 leading-relaxed">
-              Chúc mừng sinh nhật, <span className="shimmer-text font-semibold">{mockData.person.nickname}</span>.
+              Happy Birthday, <span className="shimmer-text font-semibold">{mockData.person.nickname}</span>.
               <br />
-              Mong điều em vừa ước sẽ thành hiện thực — còn anh, sẽ lo phần còn lại.
+              May your wish come true — and I'll take care of the rest.
             </p>
             <p className="font-script text-3xl text-rose-500 mt-6">
               — {mockData.person.fromName} ♡
@@ -100,7 +97,7 @@ const FinaleScene = () => {
           </div>
         ) : (
           <p className="font-serif-romantic italic text-lg text-rose-700/80 max-w-md mx-auto">
-            Nhắm mắt, ước một điều em muốn nhất năm nay, rồi bấm vào cây nến nhé.
+            Close your eyes, make the one wish you want most this year, then tap the candle.
           </p>
         )}
       </div>

@@ -1,73 +1,66 @@
 // All content personalized for Nguyễn Ngọc Hà.
-// Anh có thể chỉnh sửa bất kỳ giá trị nào bên dưới (tên, lời đề tựa, ảnh, nhạc, mật khẩu, ngày sinh nhật).
+// Edit any value below to customize (name, letter, photos, songs, music, birthday date).
 
 export const mockData = {
   person: {
     name: "Nguyễn Ngọc Hà",
     nickname: "Hà",
-    fromName: "Người luôn yêu em",
+    fromName: "The one who always loves you",
     // Hà's birthday — REPLACE with her actual date (YYYY-MM-DDTHH:mm:ss, 24h local time)
     birthdayDate: "2026-12-25T00:00:00",
-  },
-
-  gate: {
-    // Romantic password gate. Lowercase, no accents. Replace with something only Hà knows.
-    password: "hayeuanh",
-    hint: 'Hãy gõ câu anh nói với em mỗi tối — không dấu, viết liền (vd: "hayeuanh")',
-    welcome: "Anh đã giấu một điều đặc biệt ở đây — chỉ dành cho em.",
   },
 
   music: {
     // Romantic background track. Replace with any MP3 URL you want.
     url: "https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3",
-    title: "Bản nhạc của chúng ta",
-    artist: "Dành riêng cho Hà",
+    title: "Our Song",
+    artist: "For Hà",
   },
 
   photos: [
-    { id: 1, url: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1000&q=80", caption: "Nụ cười của em", date: "2024" },
-    { id: 2, url: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=1000&q=80", caption: "Một buổi chiều bình yên", date: "2024" },
-    { id: 3, url: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1000&q=80", caption: "Khi mình bên nhau", date: "2023" },
-    { id: 4, url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1000&q=80", caption: "Lần đầu ta cùng ăn mừng", date: "2023" },
-    { id: 5, url: "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?w=1000&q=80", caption: "Tiếng cười của em", date: "2022" },
-    { id: 6, url: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=1000&q=80", caption: "Dưới ánh nắng", date: "2022" },
+    { id: 1, url: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1000&q=80", caption: "Your smile", date: "2024" },
+    { id: 2, url: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=1000&q=80", caption: "A quiet afternoon", date: "2024" },
+    { id: 3, url: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1000&q=80", caption: "When we're together", date: "2023" },
+    { id: 4, url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1000&q=80", caption: "Our first celebration", date: "2023" },
+    { id: 5, url: "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?w=1000&q=80", caption: "The sound of your laugh", date: "2022" },
+    { id: 6, url: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=1000&q=80", caption: "Under the sunlight", date: "2022" },
   ],
 
   letter: {
-    title: "Lá thư anh gửi em",
-    content: `Gửi Hà của anh,
+    title: "A Letter For You",
+    content: `My dearest Hà,
 
-Hôm nay là ngày đặc biệt nhất trong năm — ngày thế giới có em.
+Today is the most special day of the year — the day the world got you.
 
-Cảm ơn em vì đã xuất hiện, vì đã ở lại, vì đã chọn anh giữa muôn vàn lựa chọn. Mỗi ngày bên em, anh học được rằng tình yêu không phải là điều gì lớn lao — nó là những điều nhỏ xíu: một tin nhắn buổi sáng, một cái nhìn khẽ cười, và cả những lần em giận dỗi rồi lại làm lành.
+Thank you for showing up, for staying, for choosing me among a million possibilities. Every day with you I learn that love is not a grand thing — it's the tiny ones: a morning text, a soft glance, the way you sulk and then forgive me minutes later.
 
-Chúc em sinh nhật thật nhiều niềm vui. Mong năm nay em sẽ khỏe mạnh, bình an, và luôn được yêu — nhất là bởi anh.
+I hope this year brings you endless joy, good health, safe days, and a lot of being loved — especially by me.
 
-Anh yêu em, hôm qua, hôm nay, và cả những ngày sắp tới.`,
-    signature: "— Anh ♡",
+I love you — yesterday, today, and every day after.`,
+    signature: "— Yours, always ♡",
   },
 
   moments: [
-    { id: 1, title: "Ngày mình gặp nhau", description: "Lần đầu anh nhìn thấy em, tim anh đã lỡ một nhịp.", date: "Tháng 01, 2020", image: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=800&q=80" },
-    { id: 2, title: "Chuyến đi đầu tiên", description: "Mình đã cùng nhau đi xa, và anh biết mình sẽ đi cùng em rất lâu nữa.", date: "Tháng 06, 2020", image: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&q=80" },
-    { id: 3, title: "Những đêm không ngủ", description: "Hai đứa nói chuyện đến tận sáng, và anh yêu em nhiều hơn sau mỗi câu.", date: "Tháng 12, 2021", image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=800&q=80" },
-    { id: 4, title: "Bữa tiệc bất ngờ", description: "Anh đã lén chuẩn bị, và nụ cười của em là phần thưởng lớn nhất.", date: "Tháng 03, 2022", image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80" },
-    { id: 5, title: "Cuối tuần cùng nhau", description: "Một chuyến đi không kế hoạch — chỉ có em, anh, và con đường.", date: "Tháng 08, 2023", image: "https://images.unsplash.com/photo-1476900966873-4f831b77e31a?w=800&q=80" },
-    { id: 6, title: "Và tất cả điều nhỏ bé", description: "Mỗi ngày bên em đều là một mốc đáng nhớ.", date: "Tháng 11, 2024", image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80" },
+    { id: 1, title: "The day we met", description: "The first time I saw you, my heart skipped.", date: "January 2020", image: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=800&q=80" },
+    { id: 2, title: "Our first trip", description: "We traveled far, and I knew I'd walk with you much further.", date: "June 2020", image: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&q=80" },
+    { id: 3, title: "Sleepless nights", description: "We talked till sunrise, and I fell for you a little more after every sentence.", date: "December 2021", image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=800&q=80" },
+    { id: 4, title: "A surprise party", description: "I quietly planned it, and your smile was the only reward I needed.", date: "March 2022", image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80" },
+    { id: 5, title: "Weekend escape", description: "An unplanned drive — just you, me, and the road.", date: "August 2023", image: "https://images.unsplash.com/photo-1476900966873-4f831b77e31a?w=800&q=80" },
+    { id: 6, title: "And all the small things", description: "Every single day with you is a milestone worth remembering.", date: "November 2024", image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80" },
   ],
 
   songs: [
-    { id: 1, title: "Em Của Ngày Hôm Qua", artist: "Sơn Tùng M-TP", duration: "4:02" },
-    { id: 2, title: "Anh Nhớ Em", artist: "Mr. Siro", duration: "4:41" },
-    { id: 3, title: "Perfect", artist: "Ed Sheeran", duration: "4:23" },
-    { id: 4, title: "Yêu Em Dài Lâu", artist: "Đức Phúc", duration: "4:15" },
-    { id: 5, title: "All of Me", artist: "John Legend", duration: "4:29" },
+    { id: 1, title: "Perfect", artist: "Ed Sheeran", duration: "4:23" },
+    { id: 2, title: "All of Me", artist: "John Legend", duration: "4:29" },
+    { id: 3, title: "Thinking Out Loud", artist: "Ed Sheeran", duration: "4:41" },
+    { id: 4, title: "Better Together", artist: "Jack Johnson", duration: "3:28" },
+    { id: 5, title: "Can't Help Falling in Love", artist: "Elvis Presley", duration: "3:02" },
   ],
 
   videos: [
-    { id: 1, title: "Lời chúc gửi em", thumbnail: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80", duration: "2:14" },
-    { id: 2, title: "Những khoảnh khắc năm 2024", thumbnail: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&q=80", duration: "3:08" },
-    { id: 3, title: "Bất ngờ nhỏ cho em", thumbnail: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80", duration: "1:45" },
-    { id: 4, title: "Mình của một ngày xưa", thumbnail: "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?w=800&q=80", duration: "2:52" },
+    { id: 1, title: "A message for you", thumbnail: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80", duration: "2:14" },
+    { id: 2, title: "Moments of 2024", thumbnail: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&q=80", duration: "3:08" },
+    { id: 3, title: "A little surprise", thumbnail: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80", duration: "1:45" },
+    { id: 4, title: "Us, a while ago", thumbnail: "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?w=800&q=80", duration: "2:52" },
   ],
 };

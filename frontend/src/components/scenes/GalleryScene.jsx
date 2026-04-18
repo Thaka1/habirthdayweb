@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ImageIcon } from 'lucide-react';
+import { X } from 'lucide-react';
 import { mockData } from '../../mock';
 
 const GalleryScene = () => {
@@ -13,10 +13,10 @@ const GalleryScene = () => {
             Scene 02
           </p>
           <h2 className="font-serif-romantic text-5xl md:text-6xl text-rose-900 italic">
-            Những khoảnh khắc đẹp
+            Our beautiful moments
           </h2>
           <p className="mt-3 text-rose-700/70 font-serif-romantic text-lg italic">
-            Mỗi bức ảnh là một ngày anh muốn lưu giữ mãi
+            Every photo is a day I want to keep forever
           </p>
         </header>
 

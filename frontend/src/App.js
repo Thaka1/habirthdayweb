@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
-import PasswordGate from './components/PasswordGate';
 import LoadingScreen from './components/LoadingScreen';
 import BirthdayExperience from './components/BirthdayExperience';
 import MusicPlayer from './components/MusicPlayer';
@@ -8,22 +7,15 @@ import { mockData } from './mock';
 
 /**
  * Phases:
- *  - 'gate'   -> PasswordGate (user interaction unlocks autoplay)
- *  - 'loading' -> LoadingScreen animation
+ *  - 'loading'    -> LoadingScreen animation (first paint, user-gesture via click-to-enter)
  *  - 'experience' -> Scene-based birthday experience
  */
 function App() {
-  const [phase, setPhase] = useState('gate');
+  const [phase, setPhase] = useState('loading');
   const [musicOn, setMusicOn] = useState(false);
   const audioRef = useRef(null);
 
-  const handleUnlock = () => {
-    // User has interacted: we can legally autoplay audio.
-    setMusicOn(true);
-    setPhase('loading');
-  };
-
-  // Attempt to play audio as soon as musicOn flips true
+  // Attempt to play audio whenever musicOn flips true
   useEffect(() => {
     const el = audioRef.current;
     if (!el) return;
@@ -36,6 +28,13 @@ function App() {
     }
   }, [musicOn]);
 
+  const handleLoadingComplete = () => {
+    // LoadingScreen triggers its "Enter" button on a user click,
+    // which is a valid gesture for audio autoplay.
+    setMusicOn(true);
+    setPhase('experience');
+  };
+
   return (
     <div className="App" data-testid="app-root">
       {/* Global background audio element */}
@@ -47,12 +46,8 @@ function App() {
         data-testid="bg-audio"
       />
 
-      {phase === 'gate' && (
-        <PasswordGate onUnlock={handleUnlock} />
-      )}
-
       {phase === 'loading' && (
-        <LoadingScreen onComplete={() => setPhase('experience')} />
+        <LoadingScreen onComplete={handleLoadingComplete} />
       )}
 
       {phase === 'experience' && (
